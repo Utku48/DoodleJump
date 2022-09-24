@@ -1,0 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Camera : MonoBehaviour
+{
+    public Transform DoodlePosition;
+
+
+    void Update()
+    {
+        {
+            if (DoodlePosition.position.y > transform.position.y)
+                transform.position = new Vector3(transform.position.x, DoodlePosition.position.y, transform.position.z);
+        }
+    }
+}
